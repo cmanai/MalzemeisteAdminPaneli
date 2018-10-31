@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#64b5f6</color>
+    <color name="colorPrimaryDark">#2286c3</color>
+    <color name="colorAccent">#bbdefb</color>
+    <color name="colorLight">#bbdefb</color>
+    <color name="colorText">#777777</color>
+    <color name="colorSearchElements">#b2b2b2</color>
+    <color name="colorGrey">#E0E0E0</color>
+    <color name="navigationBarColor">@android:color/black</color>
+    <color name="md_white_1000">#FFFFFF</color>
+    <color name="drawerArrowColor">@android:color/white</color>
+    <color name="transparent_custom">#80000000</color>
+
+
+</resources>

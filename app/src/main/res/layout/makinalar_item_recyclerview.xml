@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    xmlns:tools="http://schemas.android.com/tools"
+                                    android:id="@+id/card_view_makinalar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/cardMarginVertical"
+                                    android:layout_marginLeft="@dimen/cardMarginHorizontal"
+                                    android:layout_marginRight="@dimen/cardMarginHorizontal"
+                                    android:layout_marginTop="@dimen/cardMarginVertical"
+                                    app:cardCornerRadius="2dp"
+                                    app:cardElevation="2dp"
+
+                                    app:cardPreventCornerOverlap="false"
+                                    app:contentPadding="0dp">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/makinalar_layout"
+            android:clickable="true"
+            android:layout_height="180dp">
+
+
+        <ImageView
+                android:id="@+id/makinalar_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                />
+
+        <RelativeLayout
+                android:background="#4000"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:id="@+id/makinalar_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:gravity="center"
+
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/md_white_1000"
+
+                    android:text="Üniversite"/>
+
+            <View
+                    android:layout_below="@+id/makinalar_title"
+                    android:layout_width="100dp"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+
+                    android:layout_marginRight="16dp"
+                    android:background="@color/md_white_1000"
+                    tools:ignore="RtlHardcoded"
+                    android:id="@+id/view"/>
+
+            <View
+                    android:id="@+id/view_separator_acilacak_item"
+                    android:layout_width="100dp"
+                    android:layout_height="0.5dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/md_white_1000"
+                    tools:ignore="RtlHardcoded"
+                    android:layout_above="@+id/makinalar_title"
+                    />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

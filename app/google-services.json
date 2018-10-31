@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "30834250958",
+    "firebase_url": "https://malzemeiste-admin-paneli.firebaseio.com",
+    "project_id": "malzemeiste-admin-paneli",
+    "storage_bucket": "malzemeiste-admin-paneli.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:30834250958:android:25ef29abc0fd27d4",
+        "android_client_info": {
+          "package_name": "com.bilgiyazan.malzemeiste.adminpaneli"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "30834250958-k61kriirh6q168t9evjcn6c6gjdkcbn8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bilgiyazan.malzemeiste.adminpaneli",
+            "certificate_hash": "90c1bdea96dfd30f9745a93ff157fdebbf960940"
+          }
+        },
+        {
+          "client_id": "30834250958-muhk0kn615lltlrtojlh3er48eb0rco9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRNwIaK_NEsRWnlMLRpgK897Q_ePxIeRk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "30834250958-muhk0kn615lltlrtojlh3er48eb0rco9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

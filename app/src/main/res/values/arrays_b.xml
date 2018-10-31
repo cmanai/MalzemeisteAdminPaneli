@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="boyalar">
+
+        <item>MIMAKI</item>
+        <item>EMERALD</item>
+        <item>MLD</item>
+        <item>PRO_INK</item>
+
+
+    </string-array>
+
+</resources>

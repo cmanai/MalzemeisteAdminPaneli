@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.bilgiyazan.malzemeiste.adminpaneli">
+
+
+
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-feature
+            android:glEsVersion="0x00020000"
+            android:required="true"/>
+
+    <application
+            android:name=".Application.Malzemeiste"
+            android:allowBackup="true"
+            android:icon="@drawable/icon_malzemeiste"
+            android:label="@string/app_name"
+            android:largeHeap="true"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+
+
+        <!--
+       Set custom default icon. This is used when no icon is set for incoming notification messages.
+       See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+                android:name="com.google.firebase.messaging.default_notification_icon"
+                android:resource="@drawable/notification_icon"/>
+        <!--
+                 Set color used with incoming notification messages. This is used when no color is set for the incoming
+                 notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+                android:name="com.google.firebase.messaging.default_notification_color"
+                android:resource="@color/colorPrimary"/>
+        <!-- [END fcm_default_icon] -->
+        <activity
+                android:name=".Activity.SplashScreenActivity"
+                android:configChanges="locale|orientation"
+                android:screenOrientation="portrait"
+                android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".Activity.ContainerActivity"
+                android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+                android:name=".Activity.SeeAllActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
+                android:name=".Activity.MakinalarDetailsActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
+                android:name=".Activity.BoyalarDetailsActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
+                android:name=".Activity.MalzemeDetailsActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
+                android:name=".Activity.YazilimDetailsActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
+                android:name=".Activity.YedekDetailsActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity
+                android:name=".Activity.KampanyalarDetailsActivity"
+                android:screenOrientation="portrait">
+        </activity>
+
+
+        <service android:name=".Utils.PushReceiver">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name=".Utils.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <activity
+                android:name=".Activity.ResultSearchActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".Activity.EditMakinalarActivity"
+                  android:screenOrientation="portrait">
+
+    </activity>
+        <activity android:name=".Activity.EditBoyalarActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".Activity.EditYazilimlarActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".Activity.EditYedekActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".Activity.EditMalzemeActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".Activity.EditKampanyalarActivity"
+                  android:screenOrientation="portrait">
+        </activity>
+    </application>
+
+</manifest>

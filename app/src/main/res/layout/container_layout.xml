@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@color/md_white_1000"
+        android:layout_height="match_parent">
+
+
+    <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+
+            android:layout_height="165dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+
+                app:expandedTitleMarginEnd="64dp"
+                app:expandedTitleMarginStart="48dp"
+                app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+                app:titleEnabled="true">
+
+
+            <!--
+                                app:layout_collapseMode="pin"
+            -->
+
+
+            <android.support.v7.widget.Toolbar
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/toolbar_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:minHeight="?attr/actionBarSize"
+                    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:popupTheme="@style/OverflowMenuText"
+                    app:contentInsetStartWithNavigation="16dp"
+                    android:background="@color/colorPrimary"
+
+                    >
+
+
+                <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_width="50dp"
+                        android:layout_gravity="start|center_vertical"
+                        android:contentDescription="@string/app_name"
+                        android:layout_height="50dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/toolbar_title_malzemeiste"/>
+
+                <ImageView
+                        android:layout_centerVertical="true"
+                        android:layout_width="110dp"
+                        android:layout_gravity="start|center_vertical"
+                        android:contentDescription="@string/app_name"
+                        android:layout_height="70dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/toolbar_title_malzemeiste2"/>
+
+            </android.support.v7.widget.Toolbar>
+
+
+            <com.arlib.floatingsearchview.FloatingSearchView
+                    android:id="@+id/floating_search_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="40dp"
+                    app:theme="@style/SearchViewtheme"
+                    app:floatingSearch_searchBarMarginLeft="5dp"
+                    app:floatingSearch_searchBarMarginTop="10dp"
+                    app:floatingSearch_searchBarMarginRight="5dp"
+                    app:floatingSearch_searchHint="Ürün Arama"
+                    app:floatingSearch_suggestionsListAnimDuration="250"
+                    app:floatingSearch_showSearchKey="true"
+                    app:floatingSearch_voiceRecHint=""
+                    android:imeOptions="actionSearch"
+                    android:elevation="5dp"
+                    app:floatingSearch_menu="@menu/search_menu"
+
+                    app:floatingSearch_showVoiceInput="true"
+                    app:floatingSearch_dimBackground="false"
+                    app:floatingSearch_leftActionMode="showSearch"
+
+                    app:floatingSearch_close_search_on_keyboard_dismiss="true"
+                    tools:targetApi="lollipop"/>
+
+
+            <com.ogaclejapan.smarttablayout.SmartTabLayout
+                    android:id="@+id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:clipToPadding="false"
+                    android:paddingLeft="4dp"
+                    android:paddingRight="4dp"
+                    android:layout_marginTop="110dp"
+                    app:stl_defaultTabTextColor="@color/md_white_1000"
+                    app:stl_defaultTabTextHorizontalPadding="18dp"
+                    app:stl_dividerColor="@color/transparent"
+                    app:stl_dividerThickness="0dp"
+                    app:stl_indicatorColor="@color/primary_light"
+                    app:stl_distributeEvenly="false"
+                    app:stl_indicatorCornerRadius="18dp"
+                    app:stl_indicatorGravity="center"
+                    app:stl_indicatorInterpolation="smart"
+                    app:stl_indicatorThickness="36dp"
+                    app:stl_underlineColor="@color/colorSearchElements"
+                    app:stl_underlineThickness="0dp"
+                    />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <!--   <android.support.design.widget.TabLayout
+                   android:id="@+id/id_tabs"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"/>-->
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:visibility="gone"
+            android:id="@+id/viewpager_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="false"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            />
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/circularProgressBar"
+            android:layout_height="match_parent">
+
+        <fr.castorflex.android.circularprogressbar.CircularProgressBar
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:indeterminate="true"
+                app:cpb_color="@color/colorPrimary"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                app:cpb_rotation_speed="1.0"
+
+                app:cpb_sweep_speed="1.0"
+                app:cpb_stroke_width="4dp"
+                app:cpb_min_sweep_angle="10"
+                app:cpb_max_sweep_angle="300"
+                />
+    </RelativeLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+            android:id="@+id/myScrollingContent"
+            android:layout_width="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_height="match_parent">
+
+        <!-- Your loooooong scrolling content here. -->
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+    <!--  <com.roughike.bottombar.BottomBar
+              android:id="@+id/bottomBar"
+              android:layout_width="match_parent"
+              android:layout_height="60dp"
+              android:layout_gravity="bottom"
+              android:layout_alignParentBottom="true"
+              app:bb_tabXmlResource="@xml/bottombar_tabs"
+              app:bb_behavior="shy"
+              />-->
+
+    <!--   <android.support.v4.view.ViewPager
+               android:id="@+id/id_viewpager"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               app:layout_behavior="@string/appbar_scrolling_view_behavior"/>-->
+</android.support.design.widget.CoordinatorLayout>

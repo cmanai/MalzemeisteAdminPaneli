@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+
+
+    <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="17dp"
+            android:text="@string/sort_menu"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            tools:ignore="RelativeOverlap"/>
+
+
+    <ImageView
+            android:id="@+id/close_sort"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/textView3"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginTop="3dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:foregroundGravity="center"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/close_dialog"
+            tools:ignore="ContentDescription"/>
+
+    <CheckBox
+            android:id="@+id/sort_by_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView3"
+            android:layout_marginStart="9dp"
+            android:layout_marginLeft="9dp"
+
+            android:checked="true"
+            android:enabled="false"
+            android:text="@string/sort_by_name"
+            android:textColor="@color/colorText"
+            android:textSize="16sp"
+            android:theme="@style/MyCheckBox"/>
+
+
+    <CheckBox
+            android:id="@+id/sort_by_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/sort_by_name"
+            android:layout_alignLeft="@+id/sort_by_name"
+            android:layout_below="@+id/sort_by_name"
+            android:layout_marginTop="10dp"
+            android:text="@string/sort_by_code"
+            android:textColor="@color/colorText"
+            android:textSize="16sp"
+            android:theme="@style/MyCheckBox"/>
+
+
+</RelativeLayout>

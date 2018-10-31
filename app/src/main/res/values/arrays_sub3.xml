@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sub_items_name3">
+
+        <item>MAİN BOARD</item>
+        <item>HEAD BOARD</item>
+        <item>BIÇAK</item>
+        <item>MOTOR</item>
+        <item>KABLO</item>
+
+
+    </string-array>
+
+</resources>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@color/md_white_1000"
+        android:layout_height="match_parent">
+    <!--search_recyclerView-->
+
+
+    <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:visibility="invisible"
+            android:layout_height="?actionBarSize">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:elevation="0dp"
+
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleMarginEnd="64dp"
+                app:expandedTitleMarginStart="48dp"
+                app:layout_scrollFlags="snap"
+                app:titleEnabled="true"
+                tools:targetApi="lollipop">
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <com.arlib.floatingsearchview.FloatingSearchView
+            android:id="@+id/floating_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:theme="@style/SearchViewtheme"
+
+            app:floatingSearch_searchBarMarginLeft="5dp"
+            app:floatingSearch_searchBarMarginTop="10dp"
+            app:floatingSearch_searchBarMarginRight="5dp"
+            app:floatingSearch_searchHint="Ürün Arama"
+            app:floatingSearch_suggestionsListAnimDuration="250"
+            app:floatingSearch_showSearchKey="true"
+            app:floatingSearch_voiceRecHint=""
+            android:imeOptions="actionSearch"
+            android:elevation="5dp"
+            app:floatingSearch_menu="@menu/search_menu"
+
+            app:floatingSearch_showVoiceInput="true"
+            app:floatingSearch_dimBackground="true"
+            app:floatingSearch_leftActionMode="showHome"
+
+            app:floatingSearch_close_search_on_keyboard_dismiss="true"
+            tools:targetApi="lollipop"/>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/circularProgressBar"
+            android:layout_height="match_parent">
+
+
+        <fr.castorflex.android.circularprogressbar.CircularProgressBar
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:indeterminate="true"
+                android:layout_centerInParent="true"
+                android:visibility="invisible"
+                app:cpb_color="@color/colorPrimary"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                app:cpb_rotation_speed="1.0"
+                android:id="@+id/progress_search"
+                app:cpb_sweep_speed="1.0"
+                app:cpb_stroke_width="4dp"
+                app:cpb_min_sweep_angle="10"
+                app:cpb_max_sweep_angle="300"
+                />
+
+        <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:visibility="invisible"
+
+                android:src="@drawable/icon_malzemeiste_search"
+                android:id="@+id/nothing_result"
+                android:layout_centerInParent="true"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_below="@+id/nothing_result"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:visibility="invisible"
+                android:id="@+id/nothing_result_text"
+
+                android:text="Görüntülenecek hiçbir şey yok"
+                android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+            android:id="@+id/myScrollingContent"
+            android:layout_width="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/search_recyclerView"
+                    android:animateLayoutChanges="false"
+                    android:visibility="invisible"
+                    android:background="@color/md_white_1000"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+        </RelativeLayout>
+
+        <!-- Your loooooong scrolling content here. -->
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layoutDirection="locale"
+        app:slm_headerDisplay="inline|overlay"
+        app:slm_isHeader="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        app:slm_section_headerMarginStart="56dip"
+        tools:targetApi="jelly_bean_mr1">
+
+    <ImageView
+
+            android:id="@+id/Corporation_logo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/orange_circle"
+            android:tint="@color/colorText"
+
+            tools:ignore="ContentDescription">
+
+
+    </ImageView>
+
+    <TextView
+            android:id="@+id/text_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A"
+
+            android:layout_centerInParent="true"
+            android:textColor="#9fffffff"
+            android:textSize="22sp"
+
+
+            android:textStyle="normal|bold"
+
+
+            tools:ignore="HardcodedText,RtlHardcoded"/>
+
+
+</RelativeLayout>

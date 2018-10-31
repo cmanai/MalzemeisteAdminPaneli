@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mi Admin Paneli</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="paragraph_1">\n&#8226; malzemeiste.net olarak, 1996 yılından bu yana profesyonel kadromuz, hizmet anlayışımızdaki fark, teknik servis alanında ki çözümlerimiz ile reklam sektörü başta olmak üzere bir çok farklı endüstride çözüm odaklı projelerde hizmetlerimize devam ediyoruz. Dental alanda da etki edecek makine ve sistemlerimizle sunduğumuz çözümler bizlerin sadece tek alana odaklı olmadığımızın göstergesidir. Sektörümüzde kalitenin ön plana çıkarılmasını amaçlıyoruz. Bilgi olmadan kalitenin olmayacağını belirterek.\n</string>
+    <string name="paragraph_2">&#8226; Hizmet anlayışımızı \nBİLGİ + KALİTE = malzemeiste.net sloganı ile sizlerle paylaşmak istiyoruz. Çözüm sınduğumuz tüm ürünlerde KALİTEyi ön planlanda tutarak, kullanımları ve teknik bilgileri hakkında sizlere daha geniş kapsamlı bilgi aktarmayı ve tam verim elde edilmesini amaçlıyoruz.\n</string>
+    <string name="paragraph_3">&#8226; Yapılanmamızı üç unsur üzerinde inşa ettik. Bunlar; Tedarik, Dağıtım ve Servis Hizmetleridir. Firmamızın çözüm sunduğu alanlarımız Makine, Malzeme ve Teknik Servis hizmetleridir. Bu hizmet anlayışımız bizi farklı kılmaktadır.\n</string>
+    <string name="paragraph_4">&#8226; malzemeiste.net satış sonrası sağladığı destek ve oluşabilecek sorunlara bulduğu hızlı çözümler ile ürünlerinin arkasında durarak en iyi hizmeti sunmaya devam etmek ilkesindedir. İlkelerimizden taviz vermeden yolumuza devam etmekten onur duymaktayız…\n</string>
+    <string name="paragraph_5">&#8226; Malzemeiste.net Bir Procolor Ürünüdür (www.procolor.com.tr).\n</string>
+    <string name="action_filter">Filtre</string>
+    <string name="sort_menu">Arama Filtre Seçenekleri</string>
+    <string name="sort_by_name">Ürün adıyla sırala</string>
+    <string name="sort_by_code">Ürün koduna göre sırala</string>
+    <string name="agree">Tamam</string>
+    <string name="no_internet_message">Network bağlantısı kullanılamıyor. Bir veri bağlantısı var ve tekrar deneyin kontrol ediniz</string>
+    <string name="no_internet_title">İnternet erişimi yok</string>
+    <string name="required_field">Gerekli alan</string>
+    <string name="log_out_title">Çıkış yap ?</string>
+    <string name="logout_message">Eger ikis istediğinden emin misin?</string>
+    <string name="log_out">Çıkış yap</string>
+    <string name="loging_out">çıkış işlemi</string>
+    <string name="cancel">iptal</string>
+
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="sub_items_name">
+
+        <item>KESİM PLOTTERLERİ</item>
+        <item>SOLVENT YAZICI</item>
+        <item>SOLVENT UV YAZICILAR</item>
+        <item>UV YAZICILAR</item>
+        <item>LATEKS</item>
+
+    </string-array>
+
+</resources>

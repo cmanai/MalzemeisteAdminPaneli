@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:id="@+id/card_view_boyalar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="@dimen/cardMarginVertical"
+                                    android:layout_marginLeft="@dimen/cardMarginHorizontal"
+                                    android:layout_marginRight="@dimen/cardMarginHorizontal"
+                                    android:layout_marginTop="@dimen/cardMarginVertical"
+                                    app:cardCornerRadius="2dp"
+                                    app:cardElevation="2dp"
+
+                                    app:cardPreventCornerOverlap="false"
+                                    app:contentPadding="0dp">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/boyalar_layout"
+            android:paddingBottom="10dp"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:layout_height="match_parent">
+
+        <ImageView
+                android:id="@+id/boyalar_image"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                />
+
+        <RelativeLayout
+                android:layout_below="@id/boyalar_image"
+                android:layout_width="match_parent"
+                android:id="@+id/layout_r"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/boyalar_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+
+                    android:layout_marginBottom="35dp"
+                    android:text="Üniversite Öğrencilerine Özel İndirimler"/>
+
+            <TextView
+                    android:id="@+id/boyalar_view_more"
+                    android:layout_width="60dp"
+                    android:gravity="center"
+                    android:layout_height="30dp"
+                    android:text="devamı"
+                    android:clickable="true"
+                    android:background="?selectableItemBackground"
+                    android:layout_alignParentBottom="true"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

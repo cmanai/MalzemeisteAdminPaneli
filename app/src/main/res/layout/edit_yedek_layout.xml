@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                 xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                 xmlns:fancy="http://schemas.android.com/tools"
+                                                 android:background="@color/md_white_1000"
+                                                 android:fitsSystemWindows="true"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"
+        >
+
+    <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+        <!-- As our statusBar is transparent below and content is moved behind our toolbar has to include the padding on top so we use this area -->
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/primary"
+
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+            <Button
+                    android:id="@+id/cancel_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Iptal"
+                    android:stateListAnimator="@null"
+                    android:foreground="?selectableItemBackgroundBorderless"
+                    android:background="@color/primary"
+                    android:layout_weight="1"
+                    android:textColor="#fff"/>
+
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Kaydet"
+                    android:foreground="?selectableItemBackgroundBorderless"
+
+                    android:stateListAnimator="@null"
+                    android:background="@color/primary"
+                    android:id="@+id/save_edit"
+                    android:layout_weight="1"
+                    android:textColor="#fff"/>
+
+        </LinearLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/md_white_1000"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            >
+
+
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/md_white_1000"
+
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="YEDEK PARÇA"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary"
+                    android:id="@+id/info_1"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="16dp"
+                    android:textSize="18sp"
+
+
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="- Burada bu ürünün göreli bilgilerini güncelleyebilir ve değişiklikleri uygulayabilirsiniz"
+                    android:textColor="@color/colorText"
+                    android:id="@+id/info_2"
+                    android:layout_below="@+id/info_1"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="16dp"
+                    android:textSize="16sp"
+
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/model_name"
+                    android:layout_below="@+id/info_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="200dp"
+                    android:layout_marginEnd="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="25dp"
+                    android:inputType="textLongMessage"
+                    app:met_errorColor="@color/md_red_500"
+                    android:hint="Model adı*"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textCursorDrawable="@drawable/text_cursor_blue"
+                    android:textSize="16sp"
+                    app:met_baseColor="@color/colorPrimary"
+                    app:met_clearButton="true"
+                    fancy:met_singleLineEllipsis="true"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextColor="@color/colorPrimary"
+                    app:met_helperTextColor="@color/colorPrimary"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="@color/colorPrimary"
+                    app:met_textColor="@color/colorText"
+
+                    app:met_textColorHint="@color/colorPrimary"
+
+                    app:met_underlineColor="@color/colorPrimary"/>
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/kod"
+                    android:layout_below="@+id/model_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|textLongMessage"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="200dp"
+                    android:layout_marginEnd="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:digits="0123456789.,"
+                    android:hint="Ürün kodu*"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textCursorDrawable="@drawable/text_cursor_blue"
+                    android:textSize="16sp"
+                    app:met_baseColor="@color/colorPrimary"
+                    app:met_clearButton="true"
+                    fancy:met_singleLineEllipsis="true"
+                    app:met_errorColor="@color/md_red_500"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextColor="@color/colorPrimary"
+                    app:met_helperTextColor="@color/colorPrimary"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="@color/colorPrimary"
+                    app:met_textColor="@color/colorText"
+
+                    app:met_textColorHint="@color/colorPrimary"
+
+                    app:met_underlineColor="@color/colorPrimary"/>
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/fiyat"
+                    android:layout_below="@+id/kod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number|textLongMessage"
+                    android:layout_alignEnd="@+id/kod"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:digits="0123456789.,"
+
+
+                    android:hint="Fiyat*"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textCursorDrawable="@drawable/text_cursor_blue"
+                    android:textSize="16sp"
+                    app:met_baseColor="@color/colorPrimary"
+                    app:met_clearButton="true"
+                    fancy:met_singleLineEllipsis="true"
+                    app:met_errorColor="@color/md_red_500"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextColor="@color/colorPrimary"
+                    app:met_helperTextColor="@color/colorPrimary"
+                    app:met_iconPadding="0dp"
+
+
+                    app:met_primaryColor="@color/colorPrimary"
+                    app:met_textColor="@color/colorText"
+
+                    app:met_textColorHint="@color/colorPrimary"
+
+                    app:met_underlineColor="@color/colorPrimary"
+                    android:layout_alignRight="@+id/kod"/>
+
+            <fr.ganfra.materialspinner.MaterialSpinner
+                    android:id="@+id/rate_spinner"
+                    android:layout_below="@+id/kod"
+                    android:layout_toRightOf="@+id/fiyat"
+                    android:layout_toEndOf="@+id/fiyat"
+                    android:layout_width="120dp"
+                    android:layout_height="54dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="16dp"
+                    app:ms_multiline="false"
+
+                    app:ms_enableFloatingLabel="false"
+                    app:ms_enableErrorLabel="false"
+                    app:ms_floatingLabelText="Para"
+                    app:ms_baseColor="@color/primary"
+                    app:ms_highlightColor="@color/primary"
+                    app:ms_thickness="0.5dp"
+                    app:ms_hintColor="@color/primary"
+
+                    app:ms_arrowColor="@color/colorText"
+                    app:ms_arrowSize="10dp"
+                    app:ms_alignLabels="false"
+                    app:ms_floatingLabelColor="@color/primary"/>
+
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                    android:id="@+id/uyumlu"
+                    android:layout_below="@+id/fiyat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="150dp"
+                    android:layout_marginEnd="150dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="20dp"
+
+                    android:hint="Uyumlu"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textCursorDrawable="@drawable/text_cursor_blue"
+                    android:textSize="16sp"
+
+                    app:met_baseColor="@color/colorPrimary"
+                    app:met_clearButton="true"
+                    fancy:met_singleLineEllipsis="true"
+                    android:inputType="textLongMessage"
+                    app:met_errorColor="@color/colorPrimary"
+                    app:met_floatingLabel="highlight"
+                    app:met_floatingLabelTextColor="@color/colorPrimary"
+                    app:met_helperTextColor="@color/colorPrimary"
+                    app:met_iconPadding="0dp"
+                    app:met_primaryColor="@color/colorPrimary"
+                    app:met_textColor="@color/colorText"
+
+                    app:met_textColorHint="@color/colorPrimary"
+
+                    app:met_underlineColor="@color/colorPrimary"/>
+
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

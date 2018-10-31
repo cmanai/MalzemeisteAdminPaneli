@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fancy="http://schemas.android.com/apk/res-auto"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/splashscreen_layout_R"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:fitsSystemWindows="true"
+
+        >
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/md_white_1000"
+            android:visibility="invisible"
+            android:id="@+id/background"/>
+
+
+    <android.support.v7.widget.CardView
+            android:visibility="invisible"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            card_view:cardCornerRadius="10dp"
+            card_view:cardElevation="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="480dp"
+
+            android:background="@color/md_white_1000"
+            android:fitsSystemWindows="true"
+            android:id="@+id/cardView">
+
+
+        <ImageView
+                android:id="@+id/Logo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:visibility="invisible"
+                android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/action_filter"
+                app:srcCompat="@drawable/icon_malzemeiste"
+
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"/>
+
+        <ImageView
+                android:text="AssistCool"
+                android:layout_width="190dp"
+                android:textColor="@color/colorPrimary"
+
+                android:visibility="invisible"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="90dp"
+                android:src="@drawable/title_splash"
+                android:id="@+id/logo_text"/>
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/Username"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+                android:layout_marginLeft="8.5dp"
+                android:layout_marginRight="17dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="190dp"
+
+                android:hint="E-Posta / Kullanıcı Adı"
+                android:textColorLink="@color/colorPrimary"
+                android:textCursorDrawable="@drawable/text_cursor_blue"
+                android:textSize="16sp"
+                android:visibility="invisible"
+                app:met_baseColor="@color/colorPrimary"
+                app:met_clearButton="true"
+                fancy:met_singleLineEllipsis="true"
+                app:met_errorColor="@color/md_red_500"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextColor="@color/colorPrimary"
+                app:met_helperTextColor="@color/colorPrimary"
+                app:met_iconLeft="@drawable/ic_account_box_white_48dp"
+                app:met_iconPadding="0dp"
+                app:met_primaryColor="@color/colorPrimary"
+                app:met_textColor="@color/colorText"
+
+                app:met_textColorHint="@color/colorPrimary"
+
+                app:met_underlineColor="@color/colorPrimary"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/Password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                fancy:met_singleLineEllipsis="true"
+                android:layout_marginLeft="8.5dp"
+                android:layout_marginRight="17dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="270dp"
+                android:hint="Şıfre"
+                android:inputType="textPassword"
+                android:textColorLink="@color/colorPrimary"
+                android:textCursorDrawable="@drawable/text_cursor_blue"
+                android:textSize="16sp"
+                android:visibility="invisible"
+                app:met_baseColor="@color/colorPrimary"
+                app:met_clearButton="true"
+
+                app:met_errorColor="@color/colorPrimary"
+                app:met_floatingLabel="highlight"
+                app:met_floatingLabelTextColor="@color/colorPrimary"
+                app:met_helperTextColor="@color/colorPrimary"
+                app:met_iconLeft="@drawable/ic_lock_white_48dp"
+                app:met_iconPadding="0dp"
+                app:met_primaryColor="@color/colorPrimary"
+                app:met_textColor="@color/colorText"
+                app:met_textColorHint="@color/colorPrimary"
+
+                app:met_underlineColor="@color/colorPrimary"/>
+
+        <CheckBox
+                android:id="@+id/RememberMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/Password"
+                android:layout_alignStart="@+id/Password"
+                android:layout_centerVertical="true"
+                android:text="Beni Hatırla"
+                android:textAlignment="inherit"
+                android:visibility="invisible"
+                android:textColor="@color/colorPrimary"
+                app:buttonTint="@color/colorPrimary"
+                android:layout_marginTop="360dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:textDirection="rtl"
+                android:textSize="16sp"
+
+                android:theme="@style/MyCheckBox"
+
+                tools:ignore="UnusedAttribute"/>
+
+
+    </android.support.v7.widget.CardView>
+
+
+    <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/Login"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:visibility="invisible"
+            android:paddingTop="10dp"
+            fancy:fb_borderWidth="1dp"
+            android:elevation="3dp"
+            fancy:fb_borderColor="@color/colorPrimary"
+            fancy:fb_defaultColor="@color/colorPrimary"
+            fancy:fb_focusColor="#fff"
+            fancy:fb_iconPosition="left"
+            android:gravity="center"
+            fancy:fb_radius="30dp"
+            fancy:fb_text="Giriş"
+            fancy:fb_textColor="#FFFFFF"
+
+            android:layout_marginTop="510dp"
+            android:layout_centerHorizontal="true"
+            />
+
+
+    <ImageView
+            android:clickable="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:foreground="#80000000"
+            android:visibility="visible"
+            android:id="@+id/background_overlay"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"/>
+
+    <RelativeLayout
+            android:id="@+id/white_circle"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/whitecircle"
+            android:layout_centerVertical="true"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true"
+            >
+
+        <com.rey.material.widget.ProgressView
+                android:id="@+id/loading_data_splash"
+                android:layout_width="39dp"
+                android:layout_height="39dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                app:pv_autostart="true"
+                app:pv_circular="true"
+                android:visibility="invisible"
+                app:pv_progressMode="indeterminate"/>
+    </RelativeLayout>
+
+    <!--<RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/Login"
+
+            android:layout_centerHorizontal="true">
+
+        <TextView
+                android:id="@+id/Reset_Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/text_forgot_password"
+                android:layout_alignBottom="@+id/text_forgot_password"
+                android:layout_marginLeft="5dp"
+                android:layout_toEndOf="@+id/text_forgot_password"
+                android:visibility="invisible"
+                android:layout_toRightOf="@+id/text_forgot_password"
+                android:text="@string/login_screen_Reset"
+                android:textColor="@color/colorWhite"
+                android:textColorLink="@color/colorPrimary"
+                android:textSize="14sp"
+                android:textStyle="normal|bold"
+                android:typeface="normal"
+                tools:ignore="RtlHardcoded"/>
+
+        <TextView
+                android:id="@+id/text_forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="@string/login_screen_forgot_text"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp"
+                android:typeface="normal"
+                tools:ignore="RtlHardcoded"
+                />
+
+
+    </RelativeLayout>
+-->
+    <TextView
+            android:id="@+id/Copyright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:text="Copyright © 2016 Malzemeiste.net"
+            android:textColor="@color/md_white_1000"
+            android:visibility="invisible"
+            android:textColorLink="@color/colorPrimary"
+            android:textSize="12sp"
+            />
+
+    <!--<ImageView
+            android:id="@+id/Second_Logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:visibility="invisible"
+            android:adjustViewBounds="true"
+            android:contentDescription=""
+            app:srcCompat="@drawable/icon_malzemeiste"
+
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/Login"
+            android:layout_alignStart="@+id/Login"/>
+    &lt;!&ndash;  &ndash;&gt;-->
+</RelativeLayout>
